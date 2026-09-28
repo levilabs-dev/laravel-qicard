@@ -1,0 +1,84 @@
+{
+    "name": "levilabs/laravel-qicard",
+    "description": "Modern Laravel SDK for the QiCard Payment Gateway (Iraq): hosted card payments, status polling, cancellation, refunds, and signature-verified webhooks.",
+    "keywords": [
+        "laravel",
+        "qicard",
+        "qi-card",
+        "payment",
+        "gateway",
+        "refund",
+        "sdk",
+        "iraq",
+        "levilabs"
+    ],
+    "homepage": "https://github.com/levilabs-dev/laravel-qicard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Levi Labs",
+            "homepage": "https://levilabs.dev",
+            "role": "Organization"
+        },
+        {
+            "name": "Nizam Omer",
+            "email": "nizaamomer@gmail.com",
+            "homepage": "https://nizaamomer.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/console": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/contracts": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/database": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/http": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "larastan/larastan": "^2.9 || ^3.0",
+        "laravel/pint": "^1.17",
+        "orchestra/testbench": "^9.0 || ^10.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LeviLabs\\LaravelQicard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LeviLabs\\LaravelQicard\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LeviLabs\\LaravelQicard\\QicardServiceProvider"
+            ],
+            "aliases": {
+                "QicardPayment": "LeviLabs\\LaravelQicard\\Facades\\QicardPayment"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/levilabs-dev/laravel-qicard.git"
+    }
+}
