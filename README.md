@@ -35,17 +35,24 @@ Maintained by **[Levi Labs](https://levilabs.dev)** ([GitHub](https://github.com
 - [Contributing](#contributing)
 - [Author](#author)
 - [License](#license)
-- [License](#license)
 
 ## Requirements
 
-- PHP 8.2+
-- Laravel 11.x, 12.x or 13.x
+- PHP 8.2+ (Laravel **13.x** requires PHP **8.3+** on the application)
+- Laravel 11.x, 12.x, or 13.x
 
 ## Installation
 
+Stable release (after `v1.0.0` is tagged on GitHub / Packagist):
+
 ```bash
 composer require levilabs/laravel-qicard
+```
+
+While the first release is pending, use the `main` branch:
+
+```bash
+composer require levilabs/laravel-qicard:dev-main
 ```
 
 Publish the config file:
