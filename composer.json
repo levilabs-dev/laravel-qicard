@@ -12,11 +12,18 @@
         "iraq",
         "levilabs"
     ],
-    "homepage": "https://github.com/levilabs-dev/laravel-qicard",
+    "homepage": "https://levilabs.dev",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/levilabs-dev/laravel-qicard/issues",
+        "source": "https://github.com/levilabs-dev/laravel-qicard",
+        "docs": "https://github.com/levilabs-dev/laravel-qicard#readme",
+        "security": "https://github.com/levilabs-dev/laravel-qicard/security"
+    },
     "authors": [
         {
             "name": "Levi Labs",
+            "email": "hello@levilabs.dev",
             "homepage": "https://levilabs.dev",
             "role": "Organization"
         },

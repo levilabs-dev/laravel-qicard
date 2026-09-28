@@ -32,7 +32,9 @@ Maintained by **[Levi Labs](https://levilabs.dev)** ([GitHub](https://github.com
 - [Testing](#testing)
 - [QiCard API Reference](#qicard-api-reference)
 - [Changelog](#changelog)
+- [Contributing](#contributing)
 - [Author](#author)
+- [License](#license)
 - [License](#license)
 
 ## Requirements
@@ -273,12 +275,12 @@ All 34 of QiCard's documented error codes (`QicardException::ERROR_CODES`) are m
 ## Security
 
 - **TLS verification is never disabled.** This SDK does not expose a way to set Guzzle's `verify => false`.
-- **Webhook payloads are never trusted without a valid signature.** `verifyWebhookSignature()` implements the exact algorithm from QiCard's own "Signature verification in notifications" documentation — field order, the `-` placeholder for missing values, and two-decimal amount formatting — rather than assuming a prior integration's format was correct.
+- **Webhook payloads are never trusted without a valid signature.** `verifyWebhookSignature()` implements the exact algorithm from QiCard's own "Signature verification in notifications" documentation — field order, the `-` placeholder for missing values, and three-decimal amount formatting (as used in live webhook payloads) — rather than assuming a prior integration's format was correct.
 - **QiCard's per-outcome HTTP status is handled for you.** A 400/500 with an `{"error": {...}}` body is normalized into a thrown `QicardException`, with all 34 documented error codes mapped to readable names even when the response omits the string message.
 - **Amounts must be greater than zero**, and `requestId` is checked against QiCard's 36-character limit, before any request is sent.
 - **Credentials live in `.env`,** never in version control. Rotate `QICARD_PASSWORD` immediately if it's ever exposed.
 
-If you discover a security issue, please see [SECURITY.md](SECURITY.md) instead of using the public issue tracker.
+If you discover a security issue, please see [SECURITY.md](SECURITY.md) instead of using the public issue tracker. Reports are handled by **Levi Labs** and **Nizam Omer** (see contact details in that file).
 
 ## Testing
 
@@ -296,12 +298,18 @@ See the [QiCard Developer Documentation](https://developers-gate.qi.iq) for the 
 
 See [CHANGELOG.md](CHANGELOG.md) for what's changed in each release.
 
+## Contributing
+
+Bug reports and feature ideas are welcome via [GitHub Issues](https://github.com/levilabs-dev/laravel-qicard/issues). For contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Author
 
-**[Levi Labs](https://levilabs.dev)** — software development studio · [GitHub](https://github.com/levilabs-dev)
+**[Levi Labs](https://levilabs.dev)** — software development studio · [GitHub](https://github.com/levilabs-dev) · [hello@levilabs.dev](mailto:hello@levilabs.dev)
 
 Created and maintained by **Nizam Omer** — [nizaamomer.com](https://nizaamomer.com) · [nizaamomer@gmail.com](mailto:nizaamomer@gmail.com)
 
 ## License
 
-MIT. See [LICENSE.md](LICENSE.md).
+This package is open-source software licensed under the [MIT License](LICENSE.md).
+
+Copyright (c) 2026 **Levi Labs** and **Nizam Omer**.

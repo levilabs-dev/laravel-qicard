@@ -2,6 +2,8 @@
 
 All notable changes to `levilabs/laravel-qicard` are documented here.
 
+Project: **[Levi Labs](https://levilabs.dev)** · maintained by **Nizam Omer** ([nizaamomer.com](https://nizaamomer.com))
+
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
