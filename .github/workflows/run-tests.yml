@@ -49,6 +49,9 @@ jobs:
         run: |
           composer require "illuminate/contracts:${{ matrix.laravel }}" "illuminate/console:${{ matrix.laravel }}" "illuminate/database:${{ matrix.laravel }}" "illuminate/http:${{ matrix.laravel }}" "illuminate/support:${{ matrix.laravel }}" --no-interaction --no-update
           composer require "orchestra/testbench:${{ matrix.testbench }}" --dev --no-interaction --no-update
+          if [ "${{ matrix.laravel }}" = "13.*" ]; then
+            composer require "pestphp/pest:^4.4" "pestphp/pest-plugin-laravel:^4.1" --dev --no-interaction --no-update
+          fi
           composer update --prefer-dist --no-interaction --no-progress
 
       - name: Run tests
