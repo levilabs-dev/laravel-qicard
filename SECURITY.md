@@ -1,7 +1,7 @@
 # Security Policy
 
 **[Levi Labs](https://levilabs.dev)** · [GitHub](https://github.com/levilabs-dev)  
-Maintained by **Nizam Omer** — [nizaamomer.com](https://nizaamomer.com) · [nizaamomer@gmail.com](mailto:nizaamomer@gmail.com)
+Maintained by **Nizam Omer** — [nizaamomer.com](https://nizaamomer.com) · [nizam@nizaamomer.com](mailto:nizam@nizaamomer.com)
 
 This package handles QiCard Merchant Terminal credentials (`terminal_id`, `username`, `password`, and the webhook `public_key`) and processes real financial transactions (payments, cancellations, and refunds). Please report security issues responsibly, as described below.
 
@@ -31,7 +31,7 @@ Contact us privately (include repo name `levilabs/laravel-qicard` in the subject
 | | |
 | --- | --- |
 | **Levi Labs** | [hello@levilabs.dev](mailto:hello@levilabs.dev) |
-| **Nizam Omer** | [nizaamomer@gmail.com](mailto:nizaamomer@gmail.com) |
+| **Nizam Omer** | [nizam@nizaamomer.com](mailto:nizam@nizaamomer.com) |
 
 ### What to expect
 
